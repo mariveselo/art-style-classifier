@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Определение стиля живописи</title>
+    <link rel="stylesheet" href="./style.css?v=1.0.3">
+</head>
+<body>
+    <main class="front-page">
+        <header class="panel masthead text-panel">
+            <h1 class="nameplate">Определение стиля</h1>
+        </header>
+
+        <section class="panel story-card text-panel">
+            <h2 class="compact-heading">Как пользоваться</h2>
+            <div class="columns">
+                <div>
+                    <p class="lead-copy">
+                        Выберите изображение, посмотрите превью и запустите анализ.
+                        Сервис сравнит картину с десятью стилями, на которых была обучена модель,
+                        а затем покажет три наиболее близких варианта.
+                    </p>
+
+                    <label class="upload-box" for="fileInput">
+                        <span class="upload-title">Загрузить изображение</span>
+                        <span class="upload-copy">
+                            Подойдут обычные форматы изображений до 10 МБ.
+                            Файл можно выбрать вручную или просто перетащить в эту область.
+                        </span>
+                        <input id="fileInput" class="file-input" type="file" accept="image/*">
+                    </label>
+                    <div id="fileName" class="file-name">Файл пока не выбран.</div>
+
+                    <div class="action-row">
+                        <button id="predictButton" type="button">Показать похожие стили</button>
+                        <button id="resetButton" class="secondary-button" type="button">Сбросить изображение</button>
+                        <div id="status" class="status" aria-live="polite"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="callout">
+                        <span class="callout-title">Что важно знать</span>
+                        <p>
+                            Модель выбирает только из десяти доступных направлений. Если картина относится к другому стилю,
+                            сервис всё равно покажет ближайший вариант из этого списка. Поэтому, например, классицизм может
+                            оказаться ближе к романтизму, чем к другим классам.
+                        </p>
+                    </div>
+                    <p class="note">
+                        Чем ближе изображение к тем данным, на которых обучалась модель, тем полезнее и устойчивее результат.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel preview-card visual-panel">
+            <div class="section-label">Просмотр</div>
+            <div id="preview" class="preview">
+                <div class="placeholder">
+                    Здесь будет выбранное изображение.
+                </div>
+            </div>
+        </section>
+
+        <section class="panel styles-card text-panel">
+            <h2 class="compact-heading">Список направлений, с которыми работает сервис</h2>
+            <p class="note">
+                Результат всегда выбирается только из этого набора. Если нужного направления здесь нет,
+                ответ будет приближённым.
+            </p>
+            <div id="supportedStyles" class="supported-list"></div>
+        </section>
+
+        <section class="panel results-card text-panel">
+            <div class="section-label">Результат анализа</div>
+            <h2>Три наиболее вероятных стиля</h2>
+
+            <div id="results" class="results">
+                <div class="result-empty">
+                    После запуска анализа страница покажет три наиболее вероятных направления.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./script.js?v=1.0.4"></script>
+</body>
+</html>

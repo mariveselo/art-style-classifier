@@ -1,0 +1,26 @@
+{
+  "model_name": "Xception_production",
+  "class_names": [
+    "Abstract_Expressionism",
+    "Art_Nouveau_Modern",
+    "Baroque",
+    "Expressionism",
+    "Impressionism",
+    "Northern_Renaissance",
+    "Post_Impressionism",
+    "Realism",
+    "Romanticism",
+    "Symbolism"
+  ],
+  "img_size": [
+    299,
+    299
+  ],
+  "preprocess_input": "tf.keras.applications.xception.preprocess_input",
+  "notes": {
+    "class_order_source": "Отсортированные имена каталогов dataset_top10/train; соответствуют поведению image_dataset_from_directory по умолчанию из research/pipeline.ipynb",
+    "model_input_source": "Получено из config.json внутри Xception_production.keras",
+    "saved_with_keras_version": "3.13.2",
+    "date_saved": "2026-03-31@10:30:24"
+  }
+}

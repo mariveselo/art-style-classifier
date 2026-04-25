@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+.venv-linux/
+venv/
+
+# Runtime artifacts
+*.log
+*.pid
+*.pid.lock
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+
+# Model artifact distributed separately
+model/*.keras
+
+# Datasets
+dataset_top10/
+
+# Jupyter
+*.ipynb
+!research/eda.ipynb
+!research/pipeline.ipynb
+.ipynb_checkpoints/
+
+# Generated research artifacts
+research/gradcam_output/
+
+# Env
+.env
